@@ -58,8 +58,8 @@ require (
 	k8s.io/api v0.23.8
 	k8s.io/apimachinery v0.23.8
 	k8s.io/client-go v0.23.8
-	k8s.io/code-generator v0.23.8
-	k8s.io/kube-openapi v0.0.0-20220124234850-424119656bbf
+	k8s.io/code-generator v0.24.3
+	k8s.io/kube-openapi v0.0.0-20220328201542-3ee0da9b0b42
 	knative.dev/hack v0.0.0-20220701014203-65c463ac8c98
 	knative.dev/hack/schema v0.0.0-20220224013837-e1785985d364
 	knative.dev/pkg v0.0.0-20220715183228-f1f36a2c977e
@@ -174,6 +174,7 @@ require (
 	github.com/golang/mock v1.6.0 // indirect
 	github.com/google/btree v1.0.1 // indirect
 	github.com/google/certificate-transparency-go v1.1.3 // indirect
+	github.com/google/gnostic v0.5.7-v3refs // indirect
 	github.com/google/go-containerregistry/pkg/authn/kubernetes v0.0.0-20220301182634-bfe2ffc6b6bd // indirect
 	github.com/google/go-github/v45 v45.2.0 // indirect
 	github.com/google/go-querystring v1.1.0 // indirect

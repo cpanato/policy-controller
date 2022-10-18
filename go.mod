@@ -57,7 +57,7 @@ require (
 	k8s.io/api v0.25.2
 	k8s.io/apimachinery v0.25.2
 	k8s.io/client-go v0.25.2
-	k8s.io/code-generator v0.25.2
+	k8s.io/code-generator v0.25.3
 	k8s.io/kube-openapi v0.0.0-20220803162953-67bda5d908f1
 	knative.dev/hack v0.0.0-20221006013832-52a87e1514cb
 	knative.dev/hack/schema v0.0.0-20220914183605-d1317b08c0c3

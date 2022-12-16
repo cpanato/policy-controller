@@ -31,17 +31,17 @@ jobs:
 
       - uses: imjasonh/setup-ko@ace48d793556083a76f1e3e6068850c1f4a369aa # v0.6
 
-      - name: Set up Cloud SDK
-        uses: google-github-actions/auth@ef5d53e30bbcd8d0836f4288f5e50ff3e086997d # v1.0.0
-        with:
-          workload_identity_provider: 'projects/498091336538/locations/global/workloadIdentityPools/githubactions/providers/sigstore-policy-controller'
-          service_account: 'gha-policy-controller@projectsigstore.iam.gserviceaccount.com'
+      # - name: Set up Cloud SDK
+      #   uses: google-github-actions/auth@ef5d53e30bbcd8d0836f4288f5e50ff3e086997d # v1.0.0
+      #   with:
+      #     workload_identity_provider: 'projects/498091336538/locations/global/workloadIdentityPools/githubactions/providers/sigstore-policy-controller'
+      #     service_account: 'gha-policy-controller@projectsigstore.iam.gserviceaccount.com'
 
-      - name: 'Set up Cloud SDK'
-        uses: google-github-actions/setup-gcloud@d51b5346f85640ec2aa2fa057354d2b82c2fcbce # v1.0.1
+      # - name: 'Set up Cloud SDK'
+      #   uses: google-github-actions/setup-gcloud@d51b5346f85640ec2aa2fa057354d2b82c2fcbce # v1.0.1
 
-      - name: creds
-        run: gcloud auth configure-docker --quiet
+      # - name: creds
+      #   run: gcloud auth configure-docker --quiet
 
       - name: Set LDFLAGS
         id: ldflags
@@ -67,12 +67,12 @@ jobs:
         run: |
           set -euo pipefail
           checksum_file=$(echo "$ARTIFACTS" | jq -r '.[] | select (.type=="Checksum") | .path')
-          echo "hashes=$(cat $checksum_file | base64 -w0)" >> "$GITHUB_OUTPUT"          
+          echo "hashes=$(cat $checksum_file | base64 -w0)" >> "$GITHUB_OUTPUT"
 
-      - name: copy-signed-release-to-ghcr
-        run: make copy-signed-release-to-ghcr || true
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # - name: copy-signed-release-to-ghcr
+      #   run: make copy-signed-release-to-ghcr || true
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   provenance:
     needs: [release]

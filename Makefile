@@ -53,7 +53,7 @@ SRCS = $(shell find cmd -iname "*.go") $(shell find pkg -iname "*.go")
 GOLANGCI_LINT_DIR = $(shell pwd)/bin
 GOLANGCI_LINT_BIN = $(GOLANGCI_LINT_DIR)/golangci-lint
 
-KO_PREFIX ?= gcr.io/projectsigstore
+KO_PREFIX ?= gcr.io/cpanato
 export KO_DOCKER_REPO=$(KO_PREFIX)
 GHCR_PREFIX ?= ghcr.io/sigstore/policy-controller
 POLICY_CONTROLLER_YAML ?= policy-controller-$(GIT_TAG).yaml

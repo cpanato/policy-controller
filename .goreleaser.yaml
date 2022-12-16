@@ -8,7 +8,6 @@ before:
   hooks:
     - go mod tidy
     - /bin/bash -c 'if [ -n "$(git --no-pager diff --exit-code go.mod go.sum)" ]; then exit 1; fi'
-    - /bin/bash -c 'make build-sign-release-images'
 
 builds:
   - id: tester
@@ -73,9 +72,9 @@ snapshot:
 release:
   prerelease: allow # remove this when we start publishing non-prerelease or set to auto
   draft: true # allow for manual edits
-  github:
-    owner: sigstore
-    name: policy-controller
+  # github:
+  #   owner: sigstore
+  #   name: policy-controller
   footer: |
     ### Thanks to all contributors!
   extra_files:

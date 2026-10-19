@@ -110,7 +110,7 @@ jobs:
 
     - uses: imranismail/setup-kustomize@2ba527d4d055ab63514ba50a99456fc35684947f # v2.1.0
 
-    - uses: sigstore/cosign-installer@d58896d6a1865668819e1d91763c7751a165e159
+    - uses: sigstore/cosign-installer@6f9f17788090df1f26f669e9d70d6ae9567deba6
 
     - name: Setup mirror
       uses: chainguard-dev/actions/setup-mirror@3e8a2a226fad9e1ecbf2d359b8a7697554a4ac6d # v1.5.10
